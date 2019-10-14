@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Conference Finder App
+        </title>
+
+        <link rel="stylesheet", href="static/chat.css" type="text/css">
+    </head>
+
+    <body>
+        <div class="blank_form align">
+            <div style="display:none;" id="pre-id"> {{id_data}} </div>
+            <button onclick="store_id()"> Chat </button>
+        </div>
+        <div class="chat_container" style="display: none;">
+            <div class="top-row">
+            </div>
+            <div class="middle-row">
+               <div>
+                    <ul class="main-chat">
+                        <li style="clear: both;">
+                            <div class="chat-text left">What can I help you with?</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-row tc">
+                <form id="myform">
+                    <input type="text" id="user_question" placeholder="Start chatting with a question"/>
+                    <input type="hidden" id="user_identifier"/>
+                    <button onclick="talk_to_chatbot()">Send</button>
+                </form>
+               <span></span>
+           </div>
+        </div>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" crossorigin="anonymous"></script>
+    <script src="static/chat.js"></script>
+</html>
